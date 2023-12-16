@@ -1,6 +1,6 @@
 import Background from "./Components/Background";
 import Container from "./Components/Container";
-import InputForm from "./Components/InputForm";
+// import InputForm from "./Components/InputForm";
 
 function App() {
   return (

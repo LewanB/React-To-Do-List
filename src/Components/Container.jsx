@@ -19,13 +19,23 @@ function Container() {
   };
   //
 
-  function getToDoStateFromChildCB() {}
-
   const [toDos, setToDos] = useState([]);
 
   const handleAddButtonClick = (newTodo) => {
     setToDos([...toDos, newTodo]);
   };
+
+  const checkToDo = (index) => {
+    const toDoChecked = [...toDos];
+    toDoChecked[index].check = !toDoChecked[index].check;
+    setToDos(toDoChecked)
+
+  };
+
+
+  function clearToDo() {
+    setToDos((toDos) => toDos.filter((toDo) => !toDo.check));
+  }
 
   return (
     <>
@@ -36,14 +46,13 @@ function Container() {
 
         <ul className="addContainerStyle" id="addContainer">
           {toDos.map((toDo, index) => (
-            <ToDoElement key={index} text={toDo.text} />
+            <ToDoElement key={index} check={toDo.check} text={toDo.text} index={index} checkToDo={checkToDo} />
           ))}
         </ul>
 
         <ContainerBottom
           toDos={toDos}
-          setToDos={setToDos}
-          getFromChild={getToDoStateFromChildCB}
+          clearToDo={clearToDo}
         />
 
         <p style={toDos.length > 2 ? dragDropStyle : { opacity: "0" }}>

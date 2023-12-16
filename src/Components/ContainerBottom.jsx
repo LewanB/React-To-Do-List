@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Styles/ContainerBottomStyles.css";
 
 //
 
-function ContainerBottom({ toDos, setToDos, getToDoStateFromChildCB }) {
-  const checkedToDos = toDos.filter((toDo) => toDo.check !== false);
+function ContainerBottom({ toDos, clearToDo }) {
 
-  const handleClearing = () => {
-    const newToDos = toDos.filter((toDo) => !toDo.check);
-    setToDos(newToDos);
-  };
+  let checkedToDos = []
 
-  getToDoStateFromChildCB();
+  useEffect(() => {
+    checkedToDos = toDos.filter((toDo) => !toDo.check);
+  }, [toDos])
+
 
   return (
     <ul className="addContainerStyle" id="lastUl">
@@ -23,8 +22,9 @@ function ContainerBottom({ toDos, setToDos, getToDoStateFromChildCB }) {
           <span id="completed">Completed</span>
         </div>
         <span
+          style={{ cursor: "pointer" }}
           className={checkedToDos.length > 0 ? "clearCompleted_active" : ""}
-          onClick={handleClearing}>
+          onClick={clearToDo}>
           Clear Completed
         </span>
       </li>
