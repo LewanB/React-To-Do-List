@@ -1,0 +1,34 @@
+.formHeadingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.formHeadlineContainer h2 {
+  color: #ffffff;
+  letter-spacing: 0.5em;
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 600;
+  margin: 9vh 0 30px 0;
+}
+
+#formIconContainer {
+  background-image: url(linear-icon-of-the-sun.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+#formIconFiller {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}

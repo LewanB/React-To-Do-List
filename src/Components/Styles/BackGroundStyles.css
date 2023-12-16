@@ -1,0 +1,17 @@
+.imgBG {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 128, 255, 0.5),
+      rgba(245, 0, 255, 0.5)
+    ),
+    url(bgk-middle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+}
+
+.drkBG {
+  background-color: #181824;
+  height: 55vh;
+}

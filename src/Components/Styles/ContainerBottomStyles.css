@@ -1,0 +1,15 @@
+#lastLi {
+  border-bottom: none;
+  height: 60px;
+  color: rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  font-size: 14px;
+}
+
+.select {
+  display: flex;
+  gap: 20px;
+}

@@ -1,0 +1,50 @@
+.form {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+#taskInput {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 50px;
+  background-color: rgb(37, 39, 60);
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 6px;
+  line-height: 80px;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 80px;
+  padding-top: 6px;
+}
+
+#taskInput:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 250, 250, 0.3);
+  transition: ease-in 150ms;
+}
+
+#taskInput:focus::placeholder {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.circleIcon {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #454868;
+  background-color: transparent;
+}
+
+#addButton:active {
+  box-shadow: 0 0 15px rgba(255, 250, 250, 0.3);
+  opacity: 0.8;
+}

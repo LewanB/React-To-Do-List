@@ -1,0 +1,10 @@
+.toDoContainer {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 100vh;
+  width: 520px;
+  background-color: transparent;
+}
